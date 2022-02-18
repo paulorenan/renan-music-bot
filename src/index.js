@@ -20,4 +20,4 @@ const player = new Player(client, {
 module.exports = {
   client,
   player,
-}; // a
+}; // teste
