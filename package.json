@@ -21,6 +21,7 @@
   "dependencies": {
     "discord-player": "^5.2.2",
     "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
     "events": "^3.3.0",
     "ffmpeg-static": "^4.4.1",
     "opusscript": "0.0.8"
