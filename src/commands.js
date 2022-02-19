@@ -32,5 +32,21 @@ module.exports = async (client, msg, args, command) => {
     queue.play(song);
 
     msg.channel.send({content: `Buscando música ${song.title}...`});
+  } else if (command === "pular") {
+    const queue = player.getQueue(msg.guild.id);
+    queue.skip();
+    msg.channel.send("Pulando a música atual...");
+  } else if (command === "parar") {
+    const queue = player.getQueue(msg.guild.id);
+    queue.stop();
+    msg.channel.send("Parando a música atual...");
+  } else if (command === "pausar") {
+    const queue = player.getQueue(msg.guild.id);
+    queue.setPaused(true);
+    msg.channel.send("Pausando a música atual...");
+  } else if (command === "resumir") {
+    const queue = player.getQueue(msg.guild.id);
+    queue.setPaused(false);
+    msg.channel.send("Resumindo a música atual...");
   }
 };
